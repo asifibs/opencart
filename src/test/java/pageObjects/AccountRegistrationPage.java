@@ -5,13 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class AccountRegistrationPage extends BasePage {
-	public AccountRegistrationPage(WebDriver driver) {
-		super(driver);
+	public AccountRegistrationPage(WebDriver driver) { //constructor
+		super(driver); //invoke parent class constructor
 	}
 
 	// Elements
 		@FindBy(name = "firstname")
-		WebElement txtFirstname;
+		WebElement txtFirstname; //txt indicate text field or input box
 
 		@FindBy(name = "lastname")
 		WebElement txtLasttname;
@@ -19,7 +19,7 @@ public class AccountRegistrationPage extends BasePage {
 		@FindBy(name = "email")
   		WebElement txtEmail;
 
-		@FindBy(name = "telephone") 
+		@FindBy(name = "telephone")
 		WebElement txtTelephone;
 
 		@FindBy(xpath= "//input[@id='input-password']")
@@ -37,11 +37,11 @@ public class AccountRegistrationPage extends BasePage {
 		@FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
 		WebElement msgConfirmation;
 
-		public void setFirstName(String fname) {
+		public void setFirstName(String fname) { //method
 			txtFirstname.sendKeys(fname);
 
 		}
-
+		
 		public void setLastName(String lname) {
 			txtLasttname.sendKeys(lname);
 
